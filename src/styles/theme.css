@@ -1,0 +1,11 @@
+:root {
+  --color-primary: #4a90e2;
+  --color-secondary: #50e3c2;
+  --color-error: #d00216;
+  --color-success: #b8e986;
+
+  --color-bg: #f5f7fb;
+  --color-text: #030303;
+  --color-sidebar: #111827;
+  --color-header: #ffffff;
+}
