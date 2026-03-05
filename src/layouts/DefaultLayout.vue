@@ -1,33 +1,53 @@
 <script setup lang="ts">
-import Sidebar from '@/components/Sidebar.vue'
-import Header from '@/components/Header.vue'
+import AppSidebar from '@/components/Sidebar.vue'
+import AppHeader from '@/components/Header.vue'
 </script>
 
 <template>
   <div class="layout">
-    <Sidebar />
-    <main class="main">
-      <Header />
-      <div class="content">
-        <router-view />
-      </div>
-    </main>
+    <header class="header-wrap">
+      <AppHeader />
+    </header>
+    <div class="body">
+      <AppSidebar />
+      <main class="main">
+        <div class="content">
+          <router-view />
+        </div>
+      </main>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .layout {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  background: var(--color-bg);
+}
+.header-wrap {
+  flex-shrink: 0;
+  width: 100%;
+}
+.body {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  max-width: var(--layout-max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 24px;
 }
 .main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: var(--color-bg);
+  min-width: 0;
 }
 .content {
   flex: 1;
-  padding: 1.5rem;
+  padding: var(--content-padding);
+  background: var(--color-bg-content);
 }
 </style>

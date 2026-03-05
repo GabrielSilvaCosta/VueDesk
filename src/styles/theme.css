@@ -1,11 +1,48 @@
+/* VueDesk – Design Tokens (Figma) */
 :root {
+  /* Cores principais */
   --color-primary: #4a90e2;
   --color-secondary: #50e3c2;
-  --color-error: #d00216;
   --color-success: #b8e986;
+  --color-error: #d00216;
 
-  --color-bg: #f5f7fb;
-  --color-text: #030303;
-  --color-sidebar: #111827;
+  /* UI */
+  --color-bg: #f1f5f9;
+  --color-bg-content: rgba(248, 250, 252, 0.5);
   --color-header: #ffffff;
+  --color-sidebar: #ffffff;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-text-placeholder: #94a3b8;
+
+  /* Bordas */
+  --color-border: #e2e8f0;
+  --color-border-dashed: #cbd5e1;
+
+  /* Botão Logout / destaque */
+  --color-button-primary: #059669;
+
+  /* Avatar */
+  --color-avatar-bg: #e2e8f0;
+
+  /* Sombras */
+  --shadow-header: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  /* Layout */
+  --layout-max-width: 1280px;
+  --header-padding-x: 40px;
+  --header-padding-y: 24px;
+  --sidebar-width: 260px;
+  --sidebar-padding: 16px;
+  --content-padding: 32px;
+  --nav-link-gap: 4px;
+  --nav-link-padding: 10px 12px;
+  --nav-link-radius: 12px;
+}
+
+/* Base */
+body {
+  font-family: 'Public Sans', system-ui, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
 }
