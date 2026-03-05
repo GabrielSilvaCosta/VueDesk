@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { LayoutDashboard, User, LogOut } from 'lucide-vue-next'
+
 defineOptions({ name: 'AppHeader' })
 </script>
 
@@ -9,7 +11,12 @@ defineOptions({ name: 'AppHeader' })
         <div
           class="logo"
           aria-hidden="true"
-        />
+        >
+          <LayoutDashboard
+            class="logo-icon"
+            :size="22"
+          />
+        </div>
         <h1 class="title">
           VueDesk
         </h1>
@@ -20,34 +27,23 @@ defineOptions({ name: 'AppHeader' })
           <div
             class="avatar"
             aria-hidden="true"
-          />
+          >
+            <User
+              class="avatar-icon"
+              :size="22"
+            />
+          </div>
         </div>
         <button
           type="button"
           class="btn-logout"
           aria-label="Sair"
         >
-          <svg
+          <LogOut
             class="icon-logout"
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            :size="14"
             aria-hidden="true"
-          >
-            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
-            <polyline points="16 17 21 12 16 7" />
-            <line
-              x1="21"
-              y1="12"
-              x2="9"
-              y2="12"
-            />
-          </svg>
+          />
           <span>Logout</span>
         </button>
       </div>
@@ -76,10 +72,17 @@ defineOptions({ name: 'AppHeader' })
   gap: 12px;
 }
 .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   background: var(--color-primary);
   border-radius: 8px;
+  flex-shrink: 0;
+}
+.logo-icon {
+  color: white;
   flex-shrink: 0;
 }
 .title {
@@ -112,11 +115,18 @@ defineOptions({ name: 'AppHeader' })
   text-align: right;
 }
 .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 9999px;
   background: var(--color-avatar-bg);
   box-shadow: 0 0 0 2px var(--color-bg);
+  flex-shrink: 0;
+}
+.avatar-icon {
+  color: var(--color-text-muted);
   flex-shrink: 0;
 }
 .btn-logout {

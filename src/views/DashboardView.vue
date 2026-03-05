@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Plus } from 'lucide-vue-next'
+
 defineOptions({ name: 'DashboardView' })
 </script>
 
@@ -13,29 +15,11 @@ defineOptions({ name: 'DashboardView' })
         class="btn-add"
         aria-label="Adicionar novo"
       >
-        <svg
+        <Plus
           class="btn-add-icon"
-          width="12"
-          height="12"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
+          :size="14"
           aria-hidden="true"
-        >
-          <line
-            x1="12"
-            y1="5"
-            x2="12"
-            y2="19"
-          />
-          <line
-            x1="5"
-            y1="12"
-            x2="19"
-            y2="12"
-          />
-        </svg>
+        />
         <span>Add New</span>
       </button>
     </header>

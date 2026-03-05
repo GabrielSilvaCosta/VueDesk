@@ -10,6 +10,7 @@
     "lint": "eslint src --ext .vue,.ts,.tsx"
   },
   "dependencies": {
+    "lucide-vue-next": "^0.577.0",
     "vue": "^3.5.25",
     "vue-router": "^5.0.3"
   },
