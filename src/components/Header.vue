@@ -9,20 +9,43 @@ defineOptions({ name: "AppHeader" });
   <header class="header">
     <div class="container">
       <div class="brand">
-        <div class="logo" aria-hidden="true">
-          <LayoutGrid class="logo-icon" :size="22" />
+        <div
+          class="logo"
+          aria-hidden="true"
+        >
+          <LayoutGrid
+            class="logo-icon"
+            :size="22"
+          />
         </div>
-        <h1 class="title">VueDesk</h1>
+        <h1 class="title">
+          VueDesk
+        </h1>
       </div>
       <div class="actions">
         <div class="user-info">
           <span class="user-name">Gabriel Silva</span>
-          <div class="avatar" aria-hidden="true">
-            <img :src="avatarImg" alt="" class="avatar-img" />
+          <div
+            class="avatar"
+            aria-hidden="true"
+          >
+            <img
+              :src="avatarImg"
+              alt=""
+              class="avatar-img"
+            >
           </div>
         </div>
-        <button type="button" class="btn-logout" aria-label="Sair">
-          <LogOut class="icon-logout" :size="14" aria-hidden="true" />
+        <button
+          type="button"
+          class="btn-logout"
+          aria-label="Sair"
+        >
+          <LogOut
+            class="icon-logout"
+            :size="14"
+            aria-hidden="true"
+          />
           <span>Logout</span>
         </button>
       </div>

@@ -14,7 +14,11 @@ defineOptions({ name: "AppSidebar" });
         active-class="nav-link--active"
         exact-active-class="nav-link--active"
       >
-        <LayoutDashboard class="nav-icon" :size="20" aria-hidden="true" />
+        <LayoutDashboard
+          class="nav-icon"
+          :size="20"
+          aria-hidden="true"
+        />
         <span>Dashboard</span>
       </RouterLink>
       <RouterLink
@@ -23,7 +27,11 @@ defineOptions({ name: "AppSidebar" });
         active-class="nav-link--active"
         exact-active-class="nav-link--active"
       >
-        <Users class="nav-icon" :size="20" aria-hidden="true" />
+        <Users
+          class="nav-icon"
+          :size="20"
+          aria-hidden="true"
+        />
         <span>Usuários</span>
       </RouterLink>
       <RouterLink
@@ -32,7 +40,11 @@ defineOptions({ name: "AppSidebar" });
         active-class="nav-link--active"
         exact-active-class="nav-link--active"
       >
-        <Settings class="nav-icon" :size="20" aria-hidden="true" />
+        <Settings
+          class="nav-icon"
+          :size="20"
+          aria-hidden="true"
+        />
         <span>Configurações</span>
       </RouterLink>
     </div>
