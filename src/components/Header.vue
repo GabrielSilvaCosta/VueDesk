@@ -1,49 +1,28 @@
 <script setup lang="ts">
-import { LayoutDashboard, User, LogOut } from 'lucide-vue-next'
+import { LayoutDashboard, LogOut } from "lucide-vue-next";
+import avatarImg from "@/assets/img/icone.png";
 
-defineOptions({ name: 'AppHeader' })
+defineOptions({ name: "AppHeader" });
 </script>
 
 <template>
   <header class="header">
     <div class="container">
       <div class="brand">
-        <div
-          class="logo"
-          aria-hidden="true"
-        >
-          <LayoutDashboard
-            class="logo-icon"
-            :size="22"
-          />
+        <div class="logo" aria-hidden="true">
+          <LayoutDashboard class="logo-icon" :size="22" />
         </div>
-        <h1 class="title">
-          VueDesk
-        </h1>
+        <h1 class="title">VueDesk</h1>
       </div>
       <div class="actions">
         <div class="user-info">
           <span class="user-name">Gabriel Silva</span>
-          <div
-            class="avatar"
-            aria-hidden="true"
-          >
-            <User
-              class="avatar-icon"
-              :size="22"
-            />
+          <div class="avatar" aria-hidden="true">
+            <img :src="avatarImg" alt="" class="avatar-img" />
           </div>
         </div>
-        <button
-          type="button"
-          class="btn-logout"
-          aria-label="Sair"
-        >
-          <LogOut
-            class="icon-logout"
-            :size="14"
-            aria-hidden="true"
-          />
+        <button type="button" class="btn-logout" aria-label="Sair">
+          <LogOut class="icon-logout" :size="14" aria-hidden="true" />
           <span>Logout</span>
         </button>
       </div>
@@ -87,7 +66,7 @@ defineOptions({ name: 'AppHeader' })
 }
 .title {
   margin: 0;
-  font-family: 'Public Sans', system-ui, sans-serif;
+  font-family: "Public Sans", system-ui, sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.4;
@@ -107,7 +86,7 @@ defineOptions({ name: 'AppHeader' })
   border-right: 1px solid var(--color-border);
 }
 .user-name {
-  font-family: 'Public Sans', system-ui, sans-serif;
+  font-family: "Public Sans", system-ui, sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.43;
@@ -124,10 +103,16 @@ defineOptions({ name: 'AppHeader' })
   background: var(--color-avatar-bg);
   box-shadow: 0 0 0 2px var(--color-bg);
   flex-shrink: 0;
+  overflow: hidden;
 }
-.avatar-icon {
-  color: var(--color-text-muted);
-  flex-shrink: 0;
+.avatar-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9999px;
+  border: none;
+  outline: none;
 }
 .btn-logout {
   display: flex;
@@ -138,7 +123,7 @@ defineOptions({ name: 'AppHeader' })
   color: var(--color-header);
   border: none;
   border-radius: 8px;
-  font-family: 'Public Sans', system-ui, sans-serif;
+  font-family: "Public Sans", system-ui, sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.43;
