@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import AppSidebar from '@/components/Sidebar.vue'
-import AppHeader from '@/components/Header.vue'
+import AppSidebar from "@/components/Sidebar.vue";
+import AppHeader from "@/components/Header.vue";
 </script>
 
 <template>
@@ -37,7 +37,6 @@ import AppHeader from '@/components/Header.vue'
   max-width: var(--layout-max-width);
   width: 100%;
   margin: 0 auto;
-  padding-top: 24px;
 }
 .main {
   flex: 1;

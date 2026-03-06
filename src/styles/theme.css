@@ -29,20 +29,21 @@
   --shadow-header: 0 1px 2px rgba(0, 0, 0, 0.05);
 
   /* Layout */
-  --layout-max-width: 1280px;
-  --header-padding-x: 40px;
+  --layout-max-width: 1440px;
+  --header-padding-x: 22px;
   --header-padding-y: 24px;
-  --sidebar-width: 260px;
-  --sidebar-padding: 16px;
-  --content-padding: 32px;
+  --sidebar-width: 200px;
+  --sidebar-height: 100vh;
+  --sidebar-padding: 21px;
+  --content-padding: 24px;
   --nav-link-gap: 4px;
-  --nav-link-padding: 10px 12px;
-  --nav-link-radius: 12px;
+  --nav-link-padding: 16px 20px;
+  --nav-link-radius: 8px;
 }
 
 /* Base */
 body {
-  font-family: 'Public Sans', system-ui, sans-serif;
+  font-family: "Public Sans", system-ui, sans-serif;
   color: var(--color-text);
   background: var(--color-bg);
 }

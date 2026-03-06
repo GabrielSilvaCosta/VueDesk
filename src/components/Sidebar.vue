@@ -1,23 +1,15 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
-import { LayoutDashboard, Users, Settings } from 'lucide-vue-next'
+import { RouterLink } from "vue-router";
+import { LayoutDashboard, Users, Settings } from "lucide-vue-next";
 
-defineOptions({ name: 'AppSidebar' })
+defineOptions({ name: "AppSidebar" });
 </script>
 
 <template>
   <aside class="sidebar">
     <div class="nav">
-      <RouterLink
-        to="/"
-        class="nav-link"
-        active-class="nav-link--active"
-      >
-        <LayoutDashboard
-          class="nav-icon"
-          :size="20"
-          aria-hidden="true"
-        />
+      <RouterLink to="/" class="nav-link" active-class="nav-link--active">
+        <LayoutDashboard class="nav-icon" :size="20" aria-hidden="true" />
         <span>Dashboard</span>
       </RouterLink>
       <RouterLink
@@ -25,11 +17,7 @@ defineOptions({ name: 'AppSidebar' })
         class="nav-link"
         active-class="nav-link--active"
       >
-        <Users
-          class="nav-icon"
-          :size="20"
-          aria-hidden="true"
-        />
+        <Users class="nav-icon" :size="20" aria-hidden="true" />
         <span>Usuários</span>
       </RouterLink>
       <RouterLink
@@ -37,11 +25,7 @@ defineOptions({ name: 'AppSidebar' })
         class="nav-link"
         active-class="nav-link--active"
       >
-        <Settings
-          class="nav-icon"
-          :size="20"
-          aria-hidden="true"
-        />
+        <Settings class="nav-icon" :size="20" aria-hidden="true" />
         <span>Configurações</span>
       </RouterLink>
     </div>
@@ -54,7 +38,8 @@ defineOptions({ name: 'AppSidebar' })
   flex-shrink: 0;
   background: var(--color-sidebar);
   border-right: 1px solid var(--color-border);
-  padding: var(--sidebar-padding);
+  padding: 12px var(--sidebar-padding) var(--sidebar-padding)
+    var(--header-padding-x);
 }
 .nav {
   display: flex;
@@ -69,11 +54,13 @@ defineOptions({ name: 'AppSidebar' })
   border-radius: var(--nav-link-radius);
   color: var(--color-text-muted);
   text-decoration: none;
-  font-family: 'Public Sans', system-ui, sans-serif;
+  font-family: "Public Sans", system-ui, sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.43;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
 .nav-link:hover {
   background: var(--color-border);
@@ -85,5 +72,6 @@ defineOptions({ name: 'AppSidebar' })
 }
 .nav-icon {
   flex-shrink: 0;
+  border-radius: 8px;
 }
 </style>
