@@ -8,7 +8,12 @@ defineOptions({ name: "AppSidebar" });
 <template>
   <aside class="sidebar">
     <div class="nav">
-      <RouterLink to="/" class="nav-link" active-class="nav-link--active">
+      <RouterLink
+        to="/"
+        class="nav-link"
+        active-class="nav-link--active"
+        exact-active-class="nav-link--active"
+      >
         <LayoutDashboard class="nav-icon" :size="20" aria-hidden="true" />
         <span>Dashboard</span>
       </RouterLink>
@@ -16,6 +21,7 @@ defineOptions({ name: "AppSidebar" });
         to="/usuarios"
         class="nav-link"
         active-class="nav-link--active"
+        exact-active-class="nav-link--active"
       >
         <Users class="nav-icon" :size="20" aria-hidden="true" />
         <span>Usuários</span>
@@ -24,6 +30,7 @@ defineOptions({ name: "AppSidebar" });
         to="/configuracoes"
         class="nav-link"
         active-class="nav-link--active"
+        exact-active-class="nav-link--active"
       >
         <Settings class="nav-icon" :size="20" aria-hidden="true" />
         <span>Configurações</span>
@@ -49,9 +56,11 @@ defineOptions({ name: "AppSidebar" });
 .nav-link {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
   gap: 12px;
-  padding: var(--nav-link-padding);
-  border-radius: var(--nav-link-radius);
+  padding: 12px 14px;
+  border-radius: 14px;
   color: var(--color-text-muted);
   text-decoration: none;
   font-family: "Public Sans", system-ui, sans-serif;
@@ -69,9 +78,13 @@ defineOptions({ name: "AppSidebar" });
 .nav-link--active {
   background: var(--color-primary);
   color: var(--color-header);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+.nav-link--active .nav-icon {
+  color: var(--color-header);
+  stroke: var(--color-header);
 }
 .nav-icon {
   flex-shrink: 0;
-  border-radius: 8px;
 }
 </style>

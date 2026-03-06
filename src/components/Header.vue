@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { LayoutDashboard, LogOut } from "lucide-vue-next";
+import { LayoutGrid, LogOut } from "lucide-vue-next";
 import avatarImg from "@/assets/img/icone.png";
 
 defineOptions({ name: "AppHeader" });
@@ -10,7 +10,7 @@ defineOptions({ name: "AppHeader" });
     <div class="container">
       <div class="brand">
         <div class="logo" aria-hidden="true">
-          <LayoutDashboard class="logo-icon" :size="22" />
+          <LayoutGrid class="logo-icon" :size="22" />
         </div>
         <h1 class="title">VueDesk</h1>
       </div>
