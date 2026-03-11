@@ -1,18 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import styles from "./UsersView.module.css";
+</script>
 
 <template>
-  <div>
-    <h2>Usuários</h2>
-    <p>Página de usuários (CRUD na próxima etapa).</p>
+  <div :class="styles.wrap">
+    <h2 :class="styles.title">
+      Usuários
+    </h2>
+    <p :class="styles.text">
+      Página de usuários (CRUD na próxima etapa).
+    </p>
   </div>
 </template>
-
-<style scoped>
-h2 {
-  color: var(--color-text);
-  margin-bottom: 0.5rem;
-}
-p {
-  color: var(--color-text);
-}
-</style>

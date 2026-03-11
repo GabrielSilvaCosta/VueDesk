@@ -1,0 +1,62 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.pageTitle {
+  margin: 0;
+  font-family: "Public Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--color-text);
+}
+
+.btnAdd {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--color-primary);
+  color: var(--color-header);
+  border: none;
+  border-radius: 12px;
+  font-family: "Public Sans", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  cursor: pointer;
+}
+
+.btnAdd:hover {
+  filter: brightness(1.05);
+}
+
+.btnAddIcon {
+  flex-shrink: 0;
+}
+
+.contentPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 256px;
+  background: var(--color-header);
+  border: 2px dashed var(--color-border-dashed);
+  border-radius: 16px;
+}
+
+.contentPlaceholderText {
+  font-family: "Public Sans", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text-placeholder);
+}

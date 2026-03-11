@@ -1,0 +1,12 @@
+.wrap {
+  color: var(--color-text);
+}
+
+.title {
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  color: var(--color-text);
+}
