@@ -29,9 +29,9 @@ const emit = defineEmits<{
   "update:modelValue": [value: string];
 }>();
 
-const inputClasses = computed(() => [
-  styles.input,
-  props.error ? styles.inputHasError : "",
+const wrapperClasses = computed(() => [
+  styles.inputWrapper,
+  props.error ? styles.inputWrapperHasError : "",
 ]);
 
 function onInput(event: Event) {
@@ -49,16 +49,25 @@ function onInput(event: Event) {
     >
       {{ label }}
     </label>
-    <input
-      :id="id"
-      :value="modelValue"
-      :type="type"
-      :placeholder="placeholder"
-      :class="inputClasses"
-      :aria-invalid="!!error"
-      :aria-describedby="error ? `${id}-error` : hint ? `${id}-hint` : undefined"
-      @input="onInput"
-    >
+    <div :class="wrapperClasses">
+      <span
+        v-if="$slots.icon"
+        :class="styles.inputIcon"
+        aria-hidden="true"
+      >
+        <slot name="icon" />
+      </span>
+      <input
+        :id="id"
+        :value="modelValue"
+        :type="type"
+        :placeholder="placeholder"
+        :class="styles.input"
+        :aria-invalid="!!error"
+        :aria-describedby="error ? `${id}-error` : hint ? `${id}-hint` : undefined"
+        @input="onInput"
+      >
+    </div>
     <span
       v-if="hint && !error"
       :id="`${id}-hint`"
