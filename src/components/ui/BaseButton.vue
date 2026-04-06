@@ -1,30 +1,53 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import styles from "./BaseButton.module.css";
 
-type ButtonVariant = "primary" | "secondary" | "danger";
+type ButtonVariant = "primary" | "secondary" | "danger" | "gradient";
 
 defineOptions({ name: "BaseButton" });
 
-withDefaults(
+const props = withDefaults(
   defineProps<{
     variant?: ButtonVariant;
     type?: "button" | "submit" | "reset";
     disabled?: boolean;
+    loading?: boolean;
+    loadingLabel?: string;
+    fullWidth?: boolean;
   }>(),
   {
     variant: "primary",
     type: "button",
     disabled: false,
+    loading: false,
+    loadingLabel: "Loading…",
+    fullWidth: false,
   },
 );
+
+const isDisabled = computed(() => props.disabled || props.loading);
+
+const buttonClass = computed(() => [
+  styles.button,
+  styles[props.variant],
+  props.fullWidth ? styles.fullWidth : "",
+]);
 </script>
 
 <template>
   <button
-    :class="[styles.button, styles[variant]]"
+    :class="buttonClass"
     :type="type"
-    :disabled="disabled"
+    :disabled="isDisabled"
+    :aria-busy="loading ? 'true' : undefined"
   >
-    <slot />
+    <template v-if="loading">
+      <span
+        :class="styles.spinner"
+        aria-hidden="true"
+      />
+      <span :class="styles.srOnly">{{ loadingLabel }}</span>
+    </template>
+    <slot v-else />
   </button>
 </template>

@@ -22,6 +22,16 @@
   /* Botão Logout / destaque */
   --color-button-primary: #059669;
 
+  /* Login (Figma) */
+  --color-login-brand: #005da7;
+  --color-login-gradient: linear-gradient(90deg, #005da7 0%, #2976c7 100%);
+  --color-login-page-bg: #f8f9fa;
+  --color-login-text: #191c1d;
+  --color-login-muted: #414751;
+  --color-login-input-border: rgba(193, 199, 211, 0.3);
+  --color-login-alert-bg: #ffdad6;
+  --color-login-alert-text: #93000a;
+
   /* Avatar */
   --color-avatar-bg: #e2e8f0;
 

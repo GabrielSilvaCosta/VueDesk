@@ -1,9 +1,18 @@
 <script setup lang="ts">
 import { LayoutGrid, LogOut } from "lucide-vue-next";
+import { useRouter } from "vue-router";
 import avatarImg from "@/assets/img/icone.png";
+import { clearAuthSession } from "@/utils/authStorage";
 import styles from "./Header.module.css";
 
 defineOptions({ name: "AppHeader" });
+
+const router = useRouter();
+
+function onLogout() {
+  clearAuthSession();
+  void router.push({ name: "login" });
+}
 </script>
 
 <template>
@@ -41,6 +50,7 @@ defineOptions({ name: "AppHeader" });
           type="button"
           :class="styles.btnLogout"
           aria-label="Sair"
+          @click="onLogout"
         >
           <LogOut
             :class="styles.iconLogout"
