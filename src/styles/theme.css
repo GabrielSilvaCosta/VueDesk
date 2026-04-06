@@ -1,4 +1,11 @@
 /* VueDesk – Design Tokens (Figma) */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   /* Cores principais */
   --color-primary: #4a90e2;
